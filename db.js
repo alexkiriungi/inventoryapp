@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const uri = ''
-const connectDabase = () => {
-    mongoose.connect(process.env.DATABASE);
+
+const connectDatabase = () => {
+    mongoose.connect('mongodb://0.0.0.0:3000/', process.env.DATABASE);
     console.log("Database Connected");
 };
 
-module.exports = connectDabase;
+module.exports = connectDatabase;

@@ -4,9 +4,9 @@ const port = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const db = require('./db');
 const routes = require('./routes');
-const connectDabase = require('./db');
+const connectDatabase = require('./db');
 
-connectDabase();
+connectDatabase();
 
 app.use(bodyParser.json());
 
