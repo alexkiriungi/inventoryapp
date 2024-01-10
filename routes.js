@@ -1,6 +1,5 @@
 const express = require('express');
 const item = require('./item');
-const item = require('./user');
 
 const router = express.Router();
 
@@ -54,4 +53,6 @@ router.delete('/items/:id', async (req, res) => {
         res.status(500).send(error);
     }
 });
+
+module.exports = router;
 
