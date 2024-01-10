@@ -43,4 +43,15 @@ router.put('/items/:id', async (req, res) => {
 });
 
 //delete an item
+router.delete('/items/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const item = await item.findByIdAndDelete(id);
+        res.send(item);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send(error);
+    }
+});
 
